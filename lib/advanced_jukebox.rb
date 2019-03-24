@@ -45,6 +45,7 @@ end
 
 def play(my_songs)
   puts "Please enter a song name or number:"
+<<<<<<< HEAD
   user_input = gets.chomp
   if my_songs.keys.include?(user_input)
     my_songs.each do |name_key, path_value|
@@ -55,6 +56,16 @@ def play(my_songs)
     end
   else 
     puts "Invalid input, please try again"
+=======
+  user_input = gets.chomp 
+  my_songs.each do |name_key, path_value|
+    if user_input == name_key 
+      puts "Playing #{name_key}"
+      system "open #{path_value}"
+    else 
+      puts "Invalid input, please try again"
+    end 
+>>>>>>> dfcb71bcc1632914f5407af6b3e2e2fd33e14f15
   end 
 end
   
